@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Media</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="text-blue">ONLINE</span> <span class="text-yellow">MEDIA</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">STRATEGY</a></li>
+            <li><a href="#">SOLUSI</a></li>
+            <li><a href="#">MARKETING</a></li>
+            <li><a href="#">WORKSHOP</a></li>
+            <li><a href="#">OUR WORK</a></li>
+            <li><a href="#">PRODUK</a></li>
+            <li><a href="#">PARTNER</a></li>
+            <li><a href="#">INSPIRASI</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="panel-kontrol">
+        <div class="baris-input">
+            <label for="nilaiMin">Min : </label>
+            <input type="number" id="nilaiMin" value="1" />
+
+            <label for="nilaiMax">Max : </label>
+            <input type="number" id="nilaiMax" value="8" />
+            
+            <button onclick="hitungGanjil()" class="btn-utama">Hitung Ganjil</button>
+        </div>
+
+        <div class="baris-tombol">
+            <button onclick="ubahPosisiTeks()">Ubah Text Align</button>
+            <button onclick="ubahWarna()">Ubah Warna Box</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="grid-box">
+            
+            <div class="card bg-green" id="kotakSatu">
+                <div class="circle-icon">
+                    <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+                </div>
+                <span>Analytic</span>
+            </div>
+
+            <div class="card bg-orange">
+                <div class="circle-icon">
+                    <i class="fa-solid fa-temperature-three-quarters" aria-hidden="true"></i>
+                </div>
+                <span>Creative</span>
+            </div>
+
+            <div class="card bg-red">
+                <div class="circle-icon">
+                    <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+                </div>
+                <span>Development</span>
+            </div>
+
+            <div class="card bg-blue">
+                <div class="circle-icon">
+                    <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                </div>
+                <span>Marketing</span>
+            </div>
+
+            <div class="card bg-yellow">
+                <i class="fa-solid fa-circle-play large-icon" aria-hidden="true"></i>
+                <span>Media</span>
+            </div>
+
+            <div class="card bg-green">
+                <i class="fa-solid fa-rocket large-icon" aria-hidden="true"></i>
+                <span>Optimitation</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

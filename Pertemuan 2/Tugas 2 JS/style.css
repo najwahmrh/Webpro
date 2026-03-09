@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header { padding: 20px 50px; }
+.logo { font-size: 32px; font-weight: bold; text-transform: uppercase; }
+.text-blue { color: #00aaff; }
+.text-yellow { color: #ffcc00; }
+
+nav { background-color: #007bff; padding: 15px 50px; }
+nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+nav a { text-decoration: none; color: white; font-size: 14px; text-transform: uppercase; }
+
+.panel-kontrol {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.baris-input, .baris-tombol {
+    margin-bottom: 15px;
+}
+
+.panel-kontrol input {
+    padding: 8px;
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.panel-kontrol label {
+    font-weight: bold;
+}
+
+.panel-kontrol button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.panel-kontrol button:hover {
+    background-color: #555;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.card {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.card i { font-size: 50px; margin-bottom: 10px; }
+.card span { position: absolute; bottom: 10px; left: 15px; right: 15px; font-size: 18px; }
+
+.bg-green { background-color: #00cc00; }
+.bg-orange { background-color: #ff6600; }
+.bg-red { background-color: #ff0000; }
+.bg-blue { background-color: #00ccff; }
+.bg-yellow { background-color: #ffcc00; }
+
+.large-icon { font-size: 70px; }
