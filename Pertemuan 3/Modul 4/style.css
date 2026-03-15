@@ -80,9 +80,9 @@ font-size: 14px;
 color: #475569;
 }
 textarea.form-control {
-    width: 100%; /* Menyesuaikan panjang ke samping */
-    resize: vertical; /* Hanya bisa ditarik ke atas/bawah, bukan ke samping */
-    min-height: 120px; /* Memberikan ruang tinggi yang cukup */
+    width: 100%; 
+    resize: vertical; 
+    min-height: 120px; 
     padding: 12px 15px;
     border: 1.5px solid #cbd5e19a;
     border-radius: 8px;
