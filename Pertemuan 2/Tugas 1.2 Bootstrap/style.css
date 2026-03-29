@@ -1,0 +1,101 @@
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f4f4;
+margin:0;
+}
+
+/* Wrapper tengah */
+.wrapper{
+width:600px;
+margin:40px auto;
+text-align:center;
+background:white;
+padding-bottom:30px;
+}
+
+/* LOGO */
+.logo{
+font-size:32px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.online{
+color:#1e90ff;
+}
+
+.media{
+color:#f4b400;
+}
+
+/* MENU */
+.menu{
+background:#1976d2;
+}
+
+.menu ul{
+list-style:none;
+padding:8px;
+margin:0;
+}
+
+.menu ul li{
+display:inline-block;
+color:white;
+font-size:13px;
+margin:0 10px;
+}
+
+/* GRID BOX */
+.grid{
+width:300px;
+margin:30px auto;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+/* BOX STYLE */
+.box{
+height:120px;
+color:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.box i{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* COLORS */
+.green{
+background:#1abc9c;
+}
+
+.orange{
+background:#ff7f27;
+}
+
+.red{
+background:#ff3b30;
+}
+
+.blue{
+background:#29abe2;
+}
+
+.yellow{
+background:#fbb03b;
+}
+
+.green2{
+background:#00cc66;
+}
+
+.box p{
+margin:0;
+font-size:14px;
+}
