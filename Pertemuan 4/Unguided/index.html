@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Berkah - Kejutan THR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus+Jakarta+Sans', sans-serif; }
+        .arabic { font-family: 'Amiri', serif; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-950 text-white overflow-hidden">
+
+    <div class="relative min-h-screen flex flex-col items-center justify-center px-4">
+        <div class="absolute top-10 left-10 text-yellow-200 opacity-20 text-4xl floating" style="animation-delay: 1s;">✦</div>
+        <div class="absolute top-20 right-20 text-yellow-200 opacity-30 text-6xl floating">🌙</div>
+        <div class="absolute bottom-10 right-10 text-yellow-200 opacity-20 text-4xl floating" style="animation-delay: 2s;">✦</div>
+
+        <div class="text-center z-10">
+            <h2 class="arabic text-5xl md:text-7xl text-yellow-400 mb-4">رمضان مبارك</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Ramadan <span class="text-emerald-400">Penuh Berkah</span>
+            </h1>
+            <p class="text-slate-400 text-lg mb-10 max-w-md mx-auto">
+                Semoga hari-harimu penuh dengan kedamaian dan kebahagiaan. Klik tombol di bawah untuk melihat kejutanmu!
+            </p>
+
+            <button onclick="openModal()" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-emerald-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600 hover:bg-emerald-500 shadow-lg shadow-emerald-500/30 scale-100 hover:scale-110 active:scale-95">
+                <span class="mr-2">🎁</span> Ambil THR Kamu
+            </button>
+        </div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 transition-opacity duration-300">
+        <div class="bg-white text-slate-900 rounded-3xl p-8 max-w-sm w-full text-center transform scale-90 transition-transform duration-300 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 via-emerald-500 to-blue-500"></div>
+            
+            <div class="text-6xl mb-4">🎉</div>
+            <h3 class="text-2xl font-extrabold mb-2">Mabruk!</h3>
+            <p class="text-slate-600 mb-6 italic text-lg font-semibold">"Selamat, Anda mendapatkan THR!"</p>
+            
+            <div class="bg-emerald-50 border-2 border-dashed border-emerald-200 rounded-2xl py-6 mb-6">
+                <span class="text-sm text-emerald-600 font-bold block mb-1 uppercase tracking-wider">Nominal THR Anda:</span>
+                <div class="flex items-center justify-center text-emerald-700">
+                    <span class="text-2xl font-bold mr-1">Rp</span>
+                    <span id="nominal-thr" class="text-4xl font-black tracking-tight">0</span>
+                </div>
+            </div>
+
+            <button onclick="closeModal()" class="w-full py-3 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors">
+                Alhamdulillah, Terima Kasih!
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalContent = modal.querySelector('div');
+
+        function openModal() {
+            const modal = document.getElementById('modal');
+            const modalContent = modal.querySelector('div');
+            const displayNominal = document.getElementById('nominal-thr');
+            
+            // Tampilkan Modal
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                modalContent.classList.replace('scale-90', 'scale-100');
+            }, 10);
+
+            // Animasi Angka Nominal (Contoh: Menuju 150.000)
+            let targetNominal = 150000; 
+            let current = 0;
+            let duration = 1500; // 1.5 detik animasi
+            let stepTime = 30; // Update setiap 30ms
+            let increment = targetNominal / (duration / stepTime);
+
+            let counter = setInterval(() => {
+                current += increment;
+                if (current >= targetNominal) {
+                    displayNominal.innerText = targetNominal.toLocaleString('id-ID');
+                    clearInterval(counter);
+                } else {
+                    // Menampilkan angka acak selama proses loading
+                    displayNominal.innerText = Math.floor(current).toLocaleString('id-ID');
+                }
+            }, stepTime);
+        }
+
+        function closeModal() {
+            modal.classList.replace('opacity-100', 'opacity-0');
+            modalContent.classList.replace('scale-100', 'scale-90');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>
