@@ -57,4 +57,5 @@ if (isset($_POST['register'])) {
         <?php endif; ?>
     </div>
 </body>
+
 </html>
