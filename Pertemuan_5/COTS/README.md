@@ -310,7 +310,7 @@ app.listen(3000, () => {
 ### Mekanisme Operasi CRUD pada Aplikasi
 ### 1. Proses Menampilkan Data (Read)
 Fungsi Read berjalan secara otomatis ketika pengguna mengakses tautan /data. Pada tahap ini, halaman web mengandalkan jQuery DataTables untuk melakukan inisialisasi tabel interaktif. Secara di balik layar, DataTables mengirimkan permintaan AJAX menuju endpoint API /api/mahasiswa. Backend yang dibangun dengan Express.js kemudian menyambut permintaan tersebut dan menjalankan instruksi SQL SELECT * FROM mahasiswa pada basis data SQLite. Data yang diperoleh dikonversi ke dalam format JSON agar dapat dikirimkan kembali ke frontend. Terakhir, DataTables menangkap payload JSON tersebut dan menyajikannya secara rapi ke dalam baris-baris tabel, lengkap dengan fitur pencarian dan pembagian halaman (pagination) tanpa perlu memuat ulang seluruh halaman.
-![Operasi Read](/Pertemuan 5/COTS/Assets/read.png)
+![Operasi Read](/Pertemuan_5/COTS/Assets/read.png)
 
 ### 2. Proses Penambahan Data (Create)
 Siklus Create dimulai saat pengguna berinteraksi dengan tombol "Tambah Data" yang mengarah ke rute /form. Halaman formulir ini dihasilkan secara dinamis menggunakan mesin templating EJS. Setelah pengguna melengkapi kolom Nama, NIM, serta Jurusan dan menekan tombol simpan, peramban mengirimkan instruksi HTTP POST ke server. Express.js akan mengekstraksi informasi dari badan permintaan (request body) tersebut untuk kemudian dieksekusi menggunakan perintah INSERT INTO ke dalam tabel di SQLite. Begitu proses penyimpanan dinyatakan sukses, server akan menginstruksikan peramban untuk melakukan redirect kembali ke halaman utama /data agar pengguna bisa langsung melihat hasil input terbarunya.
