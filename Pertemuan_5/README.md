@@ -183,9 +183,10 @@ app.listen(3000, () => {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+```
 
 ### Views/form.ejs
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -333,9 +334,7 @@ Hasil pengembangan aplikasi web sederhana ini, dapat disimpulkan bahwa integrasi
 Dari sisi antarmuka, penerapan Bootstrap memberikan tampilan yang konsisten dan profesional, sementara penggunaan jQuery DataTables dengan format data JSON berhasil memenuhi spesifikasi teknis untuk menyajikan informasi secara interaktif melalui fitur pencarian, pengurutan, dan paginasi otomatis. Seluruh fungsionalitas CRUD (Create, Read, Update, Delete) telah diimplementasikan dengan baik, mulai dari proses input melalui form EJS hingga manajemen penghapusan data yang aman. Secara keseluruhan, aplikasi ini telah memenuhi seluruh kriteria penilaian praktikum, termasuk struktur halaman yang fungsional dan pengelolaan data yang terorganisir.
 
 ## Link PPT Presentasi
-
 [Masukkan Link Google Drive PPT Anda Di Sini]
 
 ## Link Video Rekaman Presentasi
-
 [Masukkan Link Google Drive Video Anda Di Sini]
