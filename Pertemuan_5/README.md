@@ -310,22 +310,22 @@ app.listen(3000, () => {
 ### Mekanisme Operasi CRUD pada Aplikasi
 ### 1. Proses Menampilkan Data (Read)
 Fungsi Read berjalan secara otomatis ketika pengguna mengakses tautan /data. Pada tahap ini, halaman web mengandalkan jQuery DataTables untuk melakukan inisialisasi tabel interaktif. Secara di balik layar, DataTables mengirimkan permintaan AJAX menuju endpoint API /api/mahasiswa. Backend yang dibangun dengan Express.js kemudian menyambut permintaan tersebut dan menjalankan instruksi SQL SELECT * FROM mahasiswa pada basis data SQLite. Data yang diperoleh dikonversi ke dalam format JSON agar dapat dikirimkan kembali ke frontend. Terakhir, DataTables menangkap payload JSON tersebut dan menyajikannya secara rapi ke dalam baris-baris tabel, lengkap dengan fitur pencarian dan pembagian halaman (pagination) tanpa perlu memuat ulang seluruh halaman.
-![Operasi Read](/Pertemuan_5/COTS/Assets/read.png)
+![Operasi Read](https://github.com/najwahmrh/Webpro/blob/b3a929d4cc027cc64022c7edf20035d08e16b690/Pertemuan_5/Assets/read.png)
 
 ### 2. Proses Penambahan Data (Create)
 Siklus Create dimulai saat pengguna berinteraksi dengan tombol "Tambah Data" yang mengarah ke rute /form. Halaman formulir ini dihasilkan secara dinamis menggunakan mesin templating EJS. Setelah pengguna melengkapi kolom Nama, NIM, serta Jurusan dan menekan tombol simpan, peramban mengirimkan instruksi HTTP POST ke server. Express.js akan mengekstraksi informasi dari badan permintaan (request body) tersebut untuk kemudian dieksekusi menggunakan perintah INSERT INTO ke dalam tabel di SQLite. Begitu proses penyimpanan dinyatakan sukses, server akan menginstruksikan peramban untuk melakukan redirect kembali ke halaman utama /data agar pengguna bisa langsung melihat hasil input terbarunya.
 ![Operasi Create](https://github.com/najwahmrh/Webpro/blob/ed689c01ddf650c5030b2906ba182a2b564a836e/Pertemuan_5/Assets/create.png)
-![Operasi Create](/Pertemuan_5/COTS/Assets/create_update.png)
+![Operasi Create](https://github.com/najwahmrh/Webpro/blob/b3a929d4cc027cc64022c7edf20035d08e16b690/Pertemuan_5/Assets/create_update.png)
 
 ### 3. Proses Pembaruan Data (Update)
 Fungsi Update dipicu ketika pengguna memilih tombol "Edit" pada entitas tertentu di dalam tabel. Aksi ini mengirimkan permintaan ke endpoint GET /form/:id. Server akan menangkap identitas (ID) unik tersebut, menarik data lama dari SQLite melalui perintah SELECT, dan menampilkannya kembali ke dalam file form.ejs sehingga kolom input sudah terisi secara otomatis (pre-populated). Setelah revisi data selesai dilakukan dan tombol simpan ditekan, sistem melakukan pengiriman data melalui HTTP POST ke /api/mahasiswa/:id. Backend kemudian memperbarui rekaman di database dengan query UPDATE. Jika sinkronisasi berhasil, pengguna akan segera dikembalikan ke tampilan tabel utama.
-![Operasi Update](/Pertemuan_5/COTS/Assets/edit.png)
-![Operasi Update](/Pertemuan_5/COTS/Assets/edit_update.png)
+![Operasi Update](https://github.com/najwahmrh/Webpro/blob/b3a929d4cc027cc64022c7edf20035d08e16b690/Pertemuan_5/Assets/edit.png)
+![Operasi Update](https://github.com/najwahmrh/Webpro/blob/b3a929d4cc027cc64022c7edf20035d08e16b690/Pertemuan_5/Assets/edit_update.png)
 
 ### 4. Proses Penghapusan Data (Delete)
 Operasi Delete dikelola melalui kolom aksi pada tabel DataTables. Setiap baris data memiliki tombol hapus yang terhubung dengan rute khusus /api/mahasiswa/delete/:id. Sebagai langkah keamanan untuk menghindari kehilangan data yang tidak disengaja, aplikasi akan memunculkan jendela konfirmasi JavaScript confirm() terlebih dahulu. Jika pengguna memberikan persetujuan, permintaan GET akan diteruskan ke server Express.js untuk mengeksekusi perintah SQL DELETE FROM berdasarkan ID yang dipilih. Segera setelah baris data terhapus secara permanen dari file SQLite, sistem akan menyegarkan tampilan dengan mengarahkan kembali pengguna ke halaman /data.
-![OPERASI Delete](/Pertemuan_5/COTS/Assets/delete.png)
-![Operasi Delete](/Pertemuan_5/COTS/Assets/delete_update.png)
+![OPERASI Delete](https://github.com/najwahmrh/Webpro/blob/b3a929d4cc027cc64022c7edf20035d08e16b690/Pertemuan_5/Assets/delete.png)
+![Operasi Delete](https://github.com/najwahmrh/Webpro/blob/b3a929d4cc027cc64022c7edf20035d08e16b690/Pertemuan_5/Assets/delete_update.png)
 
 ## Kesimpulan 
 Hasil pengembangan aplikasi web sederhana ini, dapat disimpulkan bahwa integrasi antara Node.js sebagai runtime dan Express.js sebagai framework mampu menghasilkan aplikasi yang efisien dan responsif. Penggunaan SQLite sebagai basis data terbukti sangat efektif untuk penyimpanan data lokal karena sifatnya yang ringan dan tidak memerlukan konfigurasi server yang rumit.
