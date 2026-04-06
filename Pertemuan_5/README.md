@@ -314,7 +314,7 @@ Fungsi Read berjalan secara otomatis ketika pengguna mengakses tautan /data. Pad
 
 ### 2. Proses Penambahan Data (Create)
 Siklus Create dimulai saat pengguna berinteraksi dengan tombol "Tambah Data" yang mengarah ke rute /form. Halaman formulir ini dihasilkan secara dinamis menggunakan mesin templating EJS. Setelah pengguna melengkapi kolom Nama, NIM, serta Jurusan dan menekan tombol simpan, peramban mengirimkan instruksi HTTP POST ke server. Express.js akan mengekstraksi informasi dari badan permintaan (request body) tersebut untuk kemudian dieksekusi menggunakan perintah INSERT INTO ke dalam tabel di SQLite. Begitu proses penyimpanan dinyatakan sukses, server akan menginstruksikan peramban untuk melakukan redirect kembali ke halaman utama /data agar pengguna bisa langsung melihat hasil input terbarunya.
-![Operasi Create](/Pertemuan_5/COTS/Assets/create.png)
+![Operasi Create](https://github.com/najwahmrh/Webpro/blob/ed689c01ddf650c5030b2906ba182a2b564a836e/Pertemuan_5/Assets/create.png)
 ![Operasi Create](/Pertemuan_5/COTS/Assets/create_update.png)
 
 ### 3. Proses Pembaruan Data (Update)
