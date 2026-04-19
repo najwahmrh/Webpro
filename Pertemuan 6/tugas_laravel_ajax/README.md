@@ -262,13 +262,13 @@ Penjelasan Singkat :
 Berikut merupakan cara kerja aplikasi :
 
 1. Jalankan aplikasi dengan mengetik command php artisan serve pada terminal.
-![Run Program]()
+![Run Program](https://github.com/najwahmrh/Webpro/blob/07e56b830643aba8e2e9ed98aece358f6229585c/Pertemuan%206/tugas_laravel_ajax/Assets/run.png)
 
 2. Buka http://127.0.0.1:8000 pada browser, kemudian akan ditampilkan halaman awal yang berisi judul dan tombol Tampilkan Data.
-![Tampilan Awal]()
+![Tampilan Awal](https://github.com/najwahmrh/Webpro/blob/07e56b830643aba8e2e9ed98aece358f6229585c/Pertemuan%206/tugas_laravel_ajax/Assets/tampilan.png)
 
 3. Tekan tombol Tampilkan Data, kemudian aplikasi akan mengirimkan request AJAX menggunakan Fetch API ke endpoint /mahasiswa. Selama proses berlangsung, akan ditampilkan indikator loading berupa teks “Mengambil data...”.
-![Mengambil Data]()
+![Mengambil Data](https://github.com/najwahmrh/Webpro/blob/07e56b830643aba8e2e9ed98aece358f6229585c/Pertemuan%206/tugas_laravel_ajax/Assets/ambil_data.png)
 
 4. Data ditampilkan dalam bentuk card Bootstrap yang disusun secara dinamis di dalam halaman, di mana setiap card berisi informasi mahasiswa seperti nama, NIM, kelas, dan program studi tanpa perlu melakukan reload halaman.
-![Data Ditampilkan]()
+![Data Ditampilkan](https://github.com/najwahmrh/Webpro/blob/07e56b830643aba8e2e9ed98aece358f6229585c/Pertemuan%206/tugas_laravel_ajax/Assets/data.png)
