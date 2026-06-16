@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Najwa Humairah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+        
+        .entry {
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+        
+        .entry-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+        
+        .entry-subtitle {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 0.95em;
+        }
+        
+        .entry-date {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .entry-description {
+            color: #555;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-item {
+            background-color: #f0f0f0;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            font-weight: 500;
+        }
+        
+        .education-item {
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .contact-info {
+                gap: 15px;
+                font-size: 0.85em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>NAJWA HUMAIRAH</h1>
+            <p>Web Developer & Mobile Developer</p>
+            <div class="contact-info">
+                <span>📧 najwa@email.com</span>
+                <span>📱 +62 812-3456-7890</span>
+                <span>📍 Indonesia</span>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Profile Section -->
+            <div class="section">
+                <div class="section-title">PROFIL</div>
+                <p class="entry-description">
+                    Mahasiswa berpengalaman dalam pengembangan web dan mobile dengan keahlian di berbagai framework dan teknologi modern. 
+                    Antusias dalam belajar teknologi baru dan berkomitmen untuk menghasilkan aplikasi berkualitas tinggi dengan perhatian 
+                    terhadap detail dan user experience yang optimal.
+                </p>
+            </div>
+            
+            <!-- Education Section -->
+            <div class="section">
+                <div class="section-title">PENDIDIKAN</div>
+                <div class="education-item">
+                    <div class="entry-title">Program Studi Teknik Informatika</div>
+                    <div class="entry-subtitle">Universitas Telkom</div>
+                    <div class="entry-date">2023 - Sekarang</div>
+                    <div class="entry-description">NIM: 2311102134</div>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="section">
+                <div class="section-title">KEAHLIAN</div>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Bootstrap</div>
+                    <div class="skill-item">PHP</div>
+                    <div class="skill-item">Laravel</div>
+                    <div class="skill-item">AJAX</div>
+                    <div class="skill-item">jQuery</div>
+                    <div class="skill-item">Dart</div>
+                    <div class="skill-item">Flutter</div>
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">Git</div>
+                </div>
+            </div>
+            
+            <!-- Experience Section -->
+            <div class="section">
+                <div class="section-title">PENGALAMAN BELAJAR</div>
+                <div class="entry">
+                    <div class="entry-title">Web Programming Developer</div>
+                    <div class="entry-subtitle">Pembelajaran Semester 6</div>
+                    <div class="entry-date">2024 - 2025</div>
+                    <div class="entry-description">
+                        ✓ Menguasai HTML, CSS, dan JavaScript untuk pembuatan website responsif<br>
+                        ✓ Mengembangkan aplikasi web menggunakan Bootstrap dan jQuery<br>
+                        ✓ Implementasi AJAX untuk pengalaman pengguna yang lebih baik<br>
+                        ✓ Backend development dengan PHP dan Laravel framework
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="entry-title">Mobile Application Developer</div>
+                    <div class="entry-subtitle">Flutter Development</div>
+                    <div class="entry-date">2024 - 2025</div>
+                    <div class="entry-description">
+                        ✓ Pengembangan aplikasi mobile menggunakan Flutter dan Dart<br>
+                        ✓ Implementasi UI/UX yang responsif dan menarik<br>
+                        ✓ Networking dan integrasi API dari backend<br>
+                        ✓ User interaction dan state management
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certification/Achievements -->
+            <div class="section">
+                <div class="section-title">PENCAPAIAN</div>
+                <div class="entry">
+                    <div class="entry-description">
+                        ✓ Menyelesaikan berbagai tugas dan proyek akademik dengan hasil yang memuaskan<br>
+                        ✓ Memahami dan menerapkan prinsip-prinsip responsive design<br>
+                        ✓ Kemampuan problem solving dan debugging yang baik<br>
+                        ✓ Proaktif dalam mempelajari teknologi dan best practices terbaru
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="section">
+                <div class="section-title">BAHASA</div>
+                <div class="skills-grid">
+                    <div class="skill-item">Bahasa Indonesia - Native</div>
+                    <div class="skill-item">Bahasa Inggris - Intermediate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
