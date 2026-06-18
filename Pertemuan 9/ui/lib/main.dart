@@ -45,7 +45,7 @@ class MainScreen extends StatelessWidget {
             ),
             SizedBox(height: 2),
             Text(
-              "2311102160 - Valisha Atthalia Naura Irfan",
+              "2311102134 - Najwa Humairah",
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
             ),
           ],
