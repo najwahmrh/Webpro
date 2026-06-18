@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
-          primary: Colors.teal,
+          seedColor: Colors.blue,
+          primary: Colors.blue,
           background: const Color(0xFFF6FAFA),
         ),
         fontFamily: 'Inter', // Default fallback font, feel free to add a font asset

@@ -100,7 +100,7 @@ class _CameraScreenState extends State<CameraScreen> {
       backgroundColor: const Color(0xFFF6FAFA),
       appBar: AppBar(
         title: const Text('Pertemuan 12 - Hardware API', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blue,
         elevation: 0,
         centerTitle: true,
         actions: [
@@ -132,7 +132,7 @@ class _CameraScreenState extends State<CameraScreen> {
 
   Widget _buildProfileCard() {
     return Card(
-      elevation: 4,
+      elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -140,31 +140,33 @@ class _CameraScreenState extends State<CameraScreen> {
           children: [
             CircleAvatar(
               radius: 30,
-              backgroundColor: Colors.teal.shade100,
-              child: const Icon(Icons.person, size: 40, color: Colors.teal),
+              backgroundColor: Colors.blue.shade100,
+              child: const Icon(Icons.person, size: 40, color: Colors.blue),
             ),
-            const SizedBox(width: 16),
-            const Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Nama: Valisha Atthalia Naura Irfan',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.teal,
-                    ),
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    'NIM: 2311102160',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
+            const SizedBox(height: 16),
+            const Text(
+              'Najwa Humairah', 
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue, 
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+              decoration: BoxDecoration(
+                color: Colors.blue.shade100.withOpacity(0.5), 
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: const Text(
+                'NIM: 2311102134',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF1565C0), 
+                ),
               ),
             ),
           ],
@@ -181,7 +183,7 @@ class _CameraScreenState extends State<CameraScreen> {
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.teal.withOpacity(0.1),
+            color: Colors.blue.withOpacity(0.05),
             blurRadius: 10,
             spreadRadius: 5,
           )
@@ -222,10 +224,10 @@ class _CameraScreenState extends State<CameraScreen> {
             icon: Icon(_isCameraInitialized ? Icons.camera : Icons.camera_alt, color: Colors.white),
             label: Text(_isCameraInitialized ? 'Ambil Foto' : 'Buka Kamera', style: const TextStyle(color: Colors.white)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.teal,
+              backgroundColor: Colors.blue,
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              elevation: 4,
+              elevation: 2,
             ),
           ),
         ),
@@ -233,13 +235,13 @@ class _CameraScreenState extends State<CameraScreen> {
         Expanded(
           child: ElevatedButton.icon(
             onPressed: _pickFromGallery,
-            icon: const Icon(Icons.photo_library, color: Colors.teal),
-            label: const Text('Galeri', style: TextStyle(color: Colors.teal)),
+            icon: const Icon(Icons.photo_library, color: Colors.blue),
+            label: const Text('Galeri', style: TextStyle(color: Colors.blue)),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              side: const BorderSide(color: Colors.teal),
+              side: const BorderSide(color: Colors.blue),
               elevation: 0,
             ),
           ),
