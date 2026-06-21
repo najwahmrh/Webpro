@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Widget UI Flutter',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+          seedColor: Colors.blue,
           brightness: Brightness.light,
         ),
         useMaterial3: true,
@@ -45,7 +45,7 @@ class MainScreen extends StatelessWidget {
             ),
             SizedBox(height: 2),
             Text(
-              "2311102134 - Najwa Humairah",
+              "231110213 - Najwa Humairah",
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
             ),
           ],
@@ -53,9 +53,7 @@ class MainScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(20),
-          ),
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
         ),
       ),
       body: SingleChildScrollView(
@@ -68,17 +66,19 @@ class MainScreen extends StatelessWidget {
               const SectionTitle(
                 title: "1. Container",
                 icon: Icons.check_box_outline_blank,
-                color: Colors.orange,
+                color: Colors.blue,
               ),
               Card(
                 elevation: 4,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Container(
                   height: 120,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     gradient: const LinearGradient(
-                      colors: [Colors.orange, Colors.deepOrange],
+                      colors: [Colors.lightBlue, Colors.blue],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -106,7 +106,9 @@ class MainScreen extends StatelessWidget {
               ),
               Card(
                 elevation: 4,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Center(
@@ -130,7 +132,10 @@ class MainScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.black54,
                             borderRadius: BorderRadius.circular(10),
@@ -155,11 +160,13 @@ class MainScreen extends StatelessWidget {
               const SectionTitle(
                 title: "3. GridView (6 Items)",
                 icon: Icons.grid_view,
-                color: Colors.teal,
+                color: Colors.lightBlue,
               ),
               Card(
                 elevation: 4,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: GridView.count(
@@ -171,14 +178,14 @@ class MainScreen extends StatelessWidget {
                     children: List.generate(6, (index) {
                       return Container(
                         decoration: BoxDecoration(
-                          color: Colors.teal[(index + 1) * 100],
+                          color: Colors.blue[(index + 1) * 100],
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withOpacity(0.1),
                               blurRadius: 4,
                               offset: const Offset(2, 2),
-                            )
+                            ),
                           ],
                         ),
                         child: Center(
@@ -202,46 +209,57 @@ class MainScreen extends StatelessWidget {
               const SectionTitle(
                 title: "4. ListView (Statik)",
                 icon: Icons.format_list_bulleted,
-                color: Colors.pink,
+                color: Colors.blueAccent,
               ),
               Card(
                 elevation: 4,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: ListView(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  children: const [
+                  children: [
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundColor: Colors.pink,
+                        backgroundColor: Colors.blue.shade300,
                         foregroundColor: Colors.white,
-                        child: Text("A"),
+                        child: const Text("A"),
                       ),
-                      title: Text("Item A", style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text("Deskripsi item A"),
-                      trailing: Icon(Icons.arrow_forward_ios, size: 16),
+                      title: const Text(
+                        "Item A",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: const Text("Deskripsi item A"),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                     ),
-                    Divider(height: 1),
+                    const Divider(height: 1),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundColor: Colors.purple,
+                        backgroundColor: Colors.blue.shade500,
                         foregroundColor: Colors.white,
-                        child: Text("B"),
+                        child: const Text("B"),
                       ),
-                      title: Text("Item B", style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text("Deskripsi item B"),
-                      trailing: Icon(Icons.arrow_forward_ios, size: 16),
+                      title: const Text(
+                        "Item B",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: const Text("Deskripsi item B"),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                     ),
-                    Divider(height: 1),
+                    const Divider(height: 1),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundColor: Colors.deepPurple,
+                        backgroundColor: Colors.blue.shade700,
                         foregroundColor: Colors.white,
-                        child: Text("C"),
+                        child: const Text("C"),
                       ),
-                      title: Text("Item C", style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text("Deskripsi item C"),
-                      trailing: Icon(Icons.arrow_forward_ios, size: 16),
+                      title: const Text(
+                        "Item C",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: const Text("Deskripsi item C"),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                     ),
                   ],
                 ),
@@ -253,7 +271,7 @@ class MainScreen extends StatelessWidget {
               const SectionTitle(
                 title: "5. ListView.builder",
                 icon: Icons.list_alt,
-                color: Colors.indigo,
+                color: Colors.blue,
               ),
               ListView.builder(
                 shrinkWrap: true,
@@ -263,15 +281,20 @@ class MainScreen extends StatelessWidget {
                   return Card(
                     elevation: 2,
                     margin: const EdgeInsets.only(bottom: 10),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                     child: ListTile(
                       leading: Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade50,
+                          color: Colors.blue.shade50,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Icon(Icons.data_object, color: Colors.indigo),
+                        child: const Icon(
+                          Icons.data_object,
+                          color: Colors.blue,
+                        ),
                       ),
                       title: Text(
                         "Data Array Index ke-$index",
@@ -289,24 +312,29 @@ class MainScreen extends StatelessWidget {
               const SectionTitle(
                 title: "6. ListView.separated",
                 icon: Icons.view_agenda,
-                color: Colors.green,
+                color: Colors.blueGrey,
               ),
               Card(
                 elevation: 4,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: ListView.separated(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: 3,
                   separatorBuilder: (context, index) => const Divider(
-                    color: Colors.green,
+                    color: Colors.blueGrey,
                     thickness: 1,
                     indent: 20,
                     endIndent: 20,
                   ),
                   itemBuilder: (context, index) {
                     return ListTile(
-                      leading: const Icon(Icons.check_circle, color: Colors.green),
+                      leading: const Icon(
+                        Icons.check_circle,
+                        color: Colors.blueGrey,
+                      ),
                       title: Text(
                         "Item Terpisah ${index + 1}",
                         style: const TextStyle(fontWeight: FontWeight.w600),
